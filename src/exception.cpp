@@ -11,7 +11,7 @@
 #include "new"
 #include "typeinfo"
 
-#if 0
+#ifndef __APPLE__
 #if  defined(LIBCXXRT) || defined(LIBCXX_BUILDING_LIBCXXABI) || \
   (defined(__APPLE__) && !defined(_LIBCPP_BUILDING_HAS_NO_ABI_LIBRARY))
   #include <cxxabi.h>

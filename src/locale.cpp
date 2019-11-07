@@ -4784,6 +4784,10 @@ __time_get::~__time_get()
 #pragma GCC   diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
+extern "C" {
+size_t strftime_l(char*, size_t, const char*, const struct tm*, locale_t);
+}
+
 template <>
 string
 __time_get_storage<char>::__analyze(char fmt, const ctype<char>& ct)
