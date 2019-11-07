@@ -175,9 +175,7 @@ operator delete[] (void* ptr, size_t) _NOEXCEPT
 #if !defined(_LIBCPP_HAS_NO_ALIGNED_ALLOCATIONS)
 
 #ifdef __APPLE__
-extern "C" {
-   int posix_memalign(void **memptr, size_t alignment, size_t size);
-}
+int posix_memalign(void **memptr, size_t alignment, size_t size);
 #endif
 
 _LIBCPP_WEAK
